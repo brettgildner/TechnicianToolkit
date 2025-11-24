@@ -1,5 +1,30 @@
-# Default ignored files
+# --- Python cache ---
+__pycache__/
+*.py[cod]
+
+# --- Virtual environments ---
+.venv/
+venv/
+ENV/
+env/
+
+# --- PyCharm / JetBrains ---
+.idea/
+*.iml
+
+# --- OS-specific files ---
+.DS_Store
+Thumbs.db
+
+# --- SQLite database files ---
+data/*.db
+
+# --- Logs & temp ---
+*.log
+*.tmp
+*.bak
+
+# --- Backup folders ---
 /shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
+workspace.xml
 /httpRequests/
