@@ -1,10 +1,10 @@
-# Technician Toolkit — Enterprise Technical Documentation
+# Technician Toolkit — Technical Documentation
 
 Comprehensive System Architecture & Technical Documentation
 
 Version: 2025 Platform Architecture
 
-Author: Your Development Team
+Author: Brett Gildner
 
 ---
 
@@ -61,17 +61,17 @@ Technician Toolkit provides an integrated environment for:
 |                           Application                         |
 +---------------------------------------------------------------+
 | Controller Layer (app.py)                                     |
-| - Routing                                                      |
-| - Page management                                              |
-| - Signal coordination                                          |
+| - Routing                                                     |
+| - Page management                                             |
+| - Signal coordination                                         |
 +---------------------------------------------------------------+
-| UI Layer (ui/)                                                 |
-| - Pages                                                        |
-| - Forms                                                        |
+| UI Layer (ui/)                                                |
+| - Pages                                                       |
+| - Forms                                                       |
 | - Components (tables, proxies, delegates)                     |
-| - Signals                                                      |
+| - Signals                                                     |
 +---------------------------------------------------------------+
-| Core Layer (core/)                                             |
+| Core Layer (core/)                                            |
 | - Models (SQLite-backed)                                      |
 | - Importers (Excel → DB)                                      |
 | - Logic (auth, init, utilities)                               |
@@ -126,6 +126,8 @@ The UI layer is divided into four major subsystems:
 
 ## 6. Pages (Workflow Screens)
 ### 6.1 Service Activity Page
+<img width="1247" height="581" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/ServiceActivity/ServiceActivity.png" />
+
  - Largest workflow
  - Displays service logs using specialized table model
  - Integrates:
@@ -136,7 +138,11 @@ The UI layer is divided into four major subsystems:
  - Opens ```ServiceActivityForm``` for CRUD operations
  - Automatically triggers inventory synchronization
 
+---
+
 ### 6.2 Inventory Page
+<img width="1247" height="581" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/Inventory/Inventory.png" />
+
  - Displays inventory with color-coded toner rows
  - Supports Excel imports
  - Uses InventoryFilterProxy
@@ -144,24 +150,40 @@ The UI layer is divided into four major subsystems:
  - Order workflow via OrderConfirmationForm
  - Realtime updates from Service Activity signals
 
+---
+
 ### 6.3 Equipment Information Page
+<img width="1247" height="581" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/EquipmentInfo/EquipmentInfo.png" />
+
  - Lightweight searchable table
  - Provides quick reference to equipment metadata
  - Uses EquipmentForm for editing
 
+---
+
 ### 6.4 Mileage Page
+<img width="1247" height="581" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/MileageTracker/MileageTracker.png" />
+
  - Logs mileage entries with validation
  - Features a text-based column filter
  - Exports to formatted Excel sheet
  - Uses MileageForm
 
+---
+
 ### 6.5 Parts Page
+<img width="1247" height="581" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/PartsOrders/PartsOrders.png" />
+
  - Tracks parts orders
  - Supports exports
  - Editable entries via PartsOrderForm
  - Uses PartsFilterProxy + PartsFilterDialog
 
+---
+
 ### 6.6 Expense Report Page
+<img width="1247" height="581" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/ExpenseReport/ExpenseReport.png" />
+
  - Handles monthly expense header + line items
  - Maintains editable list of expenses
  - Uses:
@@ -169,7 +191,11 @@ The UI layer is divided into four major subsystems:
     - ExpenseEntryForm
  - Exports report to Excel template
 
+---
+
 ### 6.7 Dashboard Page
+<img width="1247" height="581" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/Dashboard/Dashboard.png" />
+
  - Toner level chart
  - Inventory verification countdown
  - Mileage report countdown
@@ -190,23 +216,38 @@ All forms except ExpenseEntryForm inherit from BaseDialogForm:
  - Field registry system
  - Sanitized value extraction
 
+---
+
 ### 7.1 EquipmentForm
+<img width="1247" height="581" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/EquipmentInfo/EquipmentInfoAdd.png" />
 
 Edits equipment metadata fields.
 
+---
+
 ### 7.2 InventoryForm
+<img width="800" height="600" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/Inventory/InventoryAdd.png" />
 
 Creates/edits inventory item attributes.
 
+---
+
 ### 7.3 MileageForm
+<img width="500" height="500" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/MileageTracker/MileageTrackerAdd.png" />
 
 Validates integer mileage fields and date.
 
+---
+
 ### 7.4 PartsOrderForm
+<img width="1247" height="581" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/PartsOrders/PartsOrdersAdd.png" />
 
 Edits customer or restock orders.
 
+---
+
 ### 7.5 ServiceActivityForm
+<img width="500" height="1400" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/ServiceActivity/ServiceActivityAdd.png" />
 
 Most complex form:
  - Scrollable
@@ -215,11 +256,17 @@ Most complex form:
  - Dynamic malfunction fields
  - Automatic inventory sync on save
 
+---
+
 ### 7.6 OrderConfirmationForm
+<img width="1247" height="581" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/Inventory/InventoryOrderPopup.png" />
 
 For converting inventory items into parts orders.
 
+---
+
 ### 7.7 ExpenseEntryForm
+<img width="200" height="500" alt="Image" src="https://github.com/brettgildner/TechnicianToolkit/blob/master/assets/screenshots/ExpenseReport/ExpenseReportAdd.png" />
 
 Creates expense line items used only in export.
 
