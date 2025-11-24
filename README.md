@@ -5,11 +5,11 @@
 ![PySide6](https://img.shields.io/badge/UI-PySide6-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-Comprehensive System Architecture & Technical Documentation
+**Comprehensive System Architecture & Technical Documentation**
 
-Version: 2025 Platform Architecture
+**Version:** 2025 Platform Architecture
 
-Author: Brett Gildner
+**Author:** Brett Gildner
 
 ---
 
@@ -97,7 +97,7 @@ This system is structured to ensure:
 ---
 
 ## 4. Controller Layer
-### app.py
+## ```app.py```
 
 Acts as the central routing and refresh coordinator.
 
@@ -119,7 +119,7 @@ The controller does not manipulate database records directly — that is the res
 
 ---
 
-## . UI Layer
+## UI Layer
 
 The UI layer is divided into four major subsystems:
 1. Pages
@@ -279,14 +279,14 @@ Creates expense line items used only in export.
 
 ## 8. UI Components
 ### 8.1 Table System
-#### BaseTableModel
+### ```BaseTableModel```
  - Extracts data from objects
  - Applies alignment rules
  - Applies row coloring
  - Handles centerpiece column logic
  - Allows dependent overrides (e.g., toner color coding)
 
-#### BaseTableView
+### ```BaseTableView```
  - Dark theme
  - Sorting
  - Row selection
@@ -317,13 +317,13 @@ Enable:
  - Column visibility
  - Reset tools
 
-#### FilterProxyModels
+### ```FilterProxyModels```
 Includes:
- - ColumnFilterProxy
- - InventoryFilterProxy
- - ServiceActivityFilterProxy
- - MileageFilterProxy
- - PartsFilterProxy
+ - ```ColumnFilterProxy```
+ - ```InventoryFilterProxy```
+ - ```ServiceActivityFilterProxy```
+ - ```MileageFilterProxy```
+ - ```PartsFilterProxy```
 
 These provide:
  - Per-column filtering
@@ -344,9 +344,9 @@ Help dialogs for:
 These provide user-facing documentation directly inside the app.
 
 ### 8.5 Dashboard Widget System
- - TonerLevelsWidget (PyQtGraph bar chart)
- - InventoryCountdownWidget
- - MileageCountdownWidget
+ - ```TonerLevelsWidget``` (PyQtGraph bar chart)
+ - ```InventoryCountdownWidget```
+ - ```MileageCountdownWidget```
 
 ---
 
@@ -370,14 +370,14 @@ Each model implements:
 @classmethod init_table()
 ```
 ### 9.2 Data Models
- - InventoryItem
- - MileageEntry
- - PartsOrder
- - ExpenseLine
- - ExpenseReportHeader
- - EquipmentInfo
- - ServiceActivity
- - Category
+ - ```InventoryItem```
+ - ```MileageEntry```
+ - ```PartsOrder```
+ - ```ExpenseLine```
+ - ```ExpenseReportHeader```
+ - ```EquipmentInfo```
+ - ```ServiceActivity```
+ - ```Category```
 
 ---
 
@@ -613,5 +613,5 @@ TechnicianToolkit
 
 20. License
 
-No license provided.
-All rights reserved — closed-source until a license is defined.
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for details.
