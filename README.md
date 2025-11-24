@@ -1,5 +1,10 @@
 # Technician Toolkit — Technical Documentation
 
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+![Platform](https://img.shields.io/badge/Platform-Windows-blue)
+![PySide6](https://img.shields.io/badge/UI-PySide6-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 Comprehensive System Architecture & Technical Documentation
 
 Version: 2025 Platform Architecture
