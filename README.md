@@ -137,7 +137,7 @@ The UI layer is divided into four major subsystems:
  - Displays service logs using specialized table model
  - Integrates:
     - Inline editing
-    - PartComboDelegate
+    - ```PartComboDelegate```
     - Column filters
     - Detailed help dialog
  - Opens ```ServiceActivityForm``` for CRUD operations
@@ -150,9 +150,9 @@ The UI layer is divided into four major subsystems:
 
  - Displays inventory with color-coded toner rows
  - Supports Excel imports
- - Uses InventoryFilterProxy
- - CRUD via InventoryForm
- - Order workflow via OrderConfirmationForm
+ - Uses ```InventoryFilterProxy```
+ - CRUD via ```InventoryForm```
+ - Order workflow via ```OrderConfirmationForm```
  - Realtime updates from Service Activity signals
 
 ---
@@ -172,7 +172,7 @@ The UI layer is divided into four major subsystems:
  - Logs mileage entries with validation
  - Features a text-based column filter
  - Exports to formatted Excel sheet
- - Uses MileageForm
+ - Uses ```MileageForm```
 
 ---
 
@@ -181,8 +181,8 @@ The UI layer is divided into four major subsystems:
 
  - Tracks parts orders
  - Supports exports
- - Editable entries via PartsOrderForm
- - Uses PartsFilterProxy + PartsFilterDialog
+ - Editable entries via ```PartsOrderForm```
+ - Uses ```PartsFilterProxy``` + ```PartsFilterDialog```
 
 ---
 
@@ -192,8 +192,8 @@ The UI layer is divided into four major subsystems:
  - Handles monthly expense header + line items
  - Maintains editable list of expenses
  - Uses:
-    - ExpenseHeaderDialog
-    - ExpenseEntryForm
+    - ```ExpenseHeaderDialog```
+    - ```ExpenseEntryForm```
  - Exports report to Excel template
 
 ---
@@ -214,7 +214,7 @@ The UI layer is divided into four major subsystems:
 
 ## 7. Forms (CRUD Dialog Layer)
 
-All forms except ExpenseEntryForm inherit from BaseDialogForm:
+All forms except ```ExpenseEntryForm``` inherit from ```BaseDialogForm```:
  - Standard Title
  - Neon-accent header
  - “Save / Cancel” layout
@@ -299,12 +299,12 @@ Creates expense line items used only in export.
  - Map proxy rows to source model rows
  - Use custom hitboxes
  - Includes:
-    - ActionButtonsDelegate
-    - InventoryActionButtonDelegate
-    - SAActionButtonDelegate
-    - EquipmentActionButtonDelegate
-    - PartsActionDelegate
-    - PartComboDelegate
+    - ```ActionButtonsDelegate```
+    - ```InventoryActionButtonDelegate```
+    - ```SAActionButtonDelegate```
+    - ```EquipmentActionButtonDelegate```
+    - ```PartsActionDelegate```
+    - ```PartComboDelegate```
 
 ### 8.3 Filtering Framework
 #### Column Filter Popups
