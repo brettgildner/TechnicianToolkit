@@ -512,6 +512,7 @@ Would require:
 19. Appendix A — Project Structure
 ```bash
 TechnicianToolkit
+├── README.md
 ├── TechnicalDocumentation.md
 ├── app.py # Main controller & router
 ├── assets # Icons, images, templates
