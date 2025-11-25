@@ -1,5 +1,10 @@
 # Technician Toolkit
 
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+![Platform](https://img.shields.io/badge/Platform-Windows-blue)
+![PySide6](https://img.shields.io/badge/UI-PySide6-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 A modular, offline-capable desktop application built with PySide6 for field technicians.
 It consolidates inventory management, service activity logging, mileage tracking, expense 
 reporting, equipment information, and parts ordering into a single unified interface backed 
