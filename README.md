@@ -1,143 +1,180 @@
-# Technician Toolkit
+Skip to content
+Navigation Menu
+brettgildner
+TechnicianToolkit
 
-A modular, offline-capable desktop application built with PySide6 for field technicians.
-It consolidates inventory management, service activity logging, mileage tracking, expense 
-reporting, equipment information, and parts ordering into a single unified interface backed 
-by a local SQLite database.
+Type / to search
+Code
+Issues
+2
+Pull requests
+Actions
+Projects
+Security
+Insights
+Settings
+Files
+Go to file
+t
+assets
+core
+ui
+.gitignore
+LICENSE
+README.md
+TechnicalDocumentation.md
+app.py
+main.py
+requirements.txt
+TechnicianToolkit
+/
+README.md
+in
+master
 
-The system features a reusable UI component framework, a model-driven signal bus, Excel 
-import/export utilities, and a dark-themed polished UI.
+Edit
 
----
+Preview
+Indent mode
 
-### Table of Contents
- - Overview
- - Key Features
- - Screenshots
- - Installation
- - Running the App
- - Project Structure
- - Architecture
- - UI Framework
- - Database Models
- - Excel Import/Export
- - Future Enhancements
- - License
+Spaces
+Indent size
 
----
+2
+Line wrap mode
 
-### Overview
-
-The Technician Toolkit acts as a centralized workspace for technicians, replacing 
-spreadsheets and scattered tools with a robust, cohesive desktop environment.
-
-Built with PySide6 (Qt for Python) and designed for offline use, it supports:
-
- - Secure authentication
- - Inventory tracking with automatic synchronization
- - Service activity logging with part usage integration
- - Mileage tracking with template export
- - Expense reporting
- - Equipment information management
- - Parts ordering
- - Dashboard analytics and status widgets
-
----
-
-### Key Features
-
-#### Authentication
- - Secure login & signup
- - Argon2id password hashing
- - Fully offline authentication
- - User-specific data isolation
- - Sidebar remains locked until login completes
-
-#### Inventory Management
- - Track part numbers, quantities, metadata, categories
- - Inline editing
- - Excel imports
- - Column filtering & visibility controls
- - Automatic sync with Service Activity part usage
-
-#### Service Activity Log
- - Customer, area, equipment, malfunction, timestamps
- - Duration automatically calculated
- - Add/remove parts and quantities
- - Excel import support
- - Automatic inventory adjustments (additions, deletions, updates)
- - Full filtering system with column popups
-
-#### Equipment Information
- - Searchable table
- - Column filtering & actions
- - Edit and delete equipment records
-
-#### Mileage Tracker
- - Add/edit/delete mileage entries
- - Computed “miles driven” column
- - Filter by text, date range, or column filters
- - Export to preformatted Excel mileage template
-
-#### Expense Reporting
- - Maintain a monthly expense report header
- - Add multiple expense line items
- - Export to Excel expense form template
- - Supports mileage and itemized entries
-
-#### Parts Ordering
- - Record restock or customer-requested orders
- - Filterable table
- - CSV export with optional deletion
- - Integrated editor & confirmation form
-
-#### Dashboard
- - Toner level visualization
- - Inventory verification countdown
- - Mileage deadline countdown
-
----
-### Screenshots
-
-
-| **Dashboard** | **Service Activity** |
-|----------|------------------|
-| <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/Dashboard/Dashboard.png" width="400"> | <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/ServiceActivity/ServiceActivity.png" width="400"> |
-| *Toner levels, deadlines, and quick-action buttons* | *Logged service calls with timestamps, parts, and details* |
-
-<br>
-
-| **Inventory** | **Expense Report** |
-|----------|----------------|
-| <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/Inventory/Inventory.png" width="400"> | <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/ExpenseReport/ExpenseReport.png" width="400"> |
-| *Part tracking, verification dates, and a 'quick-order' function* | *Monthly expense header + itemized entries with export* |
-
-
----
-
-### Installation
-#### 1. Clone the repository
-```bash
-git clone https://github.com/brettgildner/TechnicianToolkit.git
-cd TechnicianToolkit
-```
-#### 2. Create & activate a virtual environment
-```bash
-python -m venv .venv
-
+Soft wrap
+Editing README.md file contents
+Selection deleted
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
 # Windows
 .venv\Scripts\activate
 
 # macOS/Linux
 source .venv/bin/activate
 ```
-#### 3. Install dependencies
+### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 ---
 
-### Running the App
+## Running the App
 ```bash
 python main.py
 ```
@@ -148,7 +185,7 @@ On first launch:
 
 ---
 
-### Project Structure
+## Project Structure
 ```css
 TechnicianToolkit/
 ├── app.py
@@ -172,30 +209,18 @@ TechnicianToolkit/
 ```
 ---
 
-### Architecture
-One Stop Shop uses a hybrid MVC-style architecture with:
+## Architecture
+Technician Toolkit uses a hybrid MVC-style architecture with:
  - Models → SQLite-backed classes with CRUD methods
  - Views → PySide6 pages, dialogs, and widgets
  - Controllers → The `App` object, refresh orchestrator, and page router
  - Signal Bus → Centralized model signals to refresh UI automatically
  - Reusable Component Framework → Tables, delegates, popups, proxy models
 
-#### Signal Bus
-
-Signals emitted by models:
- - `inventory_changed`
- - `service_activity_changed`
- - `mileage_changed`
- - `parts_changed`
- - `equipment_changed`
- - `expense_changed`
-
-The `App` listens and refreshes pages automatically.
-
 ---
 
-### UI Framework
-#### Base Components
+## UI Framework
+### Base Components
  - ```BaseTableModel``` — Data extraction, alignment, formatting
  - ```BaseTableView``` — Dark-themed, sortable table view
  - Action Buttons Delegates — Edit/Delete/Order in-table buttons
@@ -203,34 +228,24 @@ The `App` listens and refreshes pages automatically.
  - Column Filter Popups — Column checkboxes & visibility
  - Dashboard Widgets — Aggregations + charts
 
-#### Forms
+### Forms
 All CRUD dialogs use:
  - ```BaseDialogForm``` (except ```ExpenseEntryForm```)
  - Uniform layout
  - Validations
  - Model save + callback
 
-#### Pages
+### Pages
 Each page wraps:
- - Toolbar
- - Table view
- - Filter logic
- - CRUD operations
- - Help dialog
+ - Toolbar | Table view | Filter logic | CRUD operations | Help dialog
 
 ---
 
-### Database Models
+## Database Models
 
 Models include:
- - ```InventoryItem```
- - ```ServiceActivity```
- - ```EquipmentInfo```
- - ```MileageEntry```
- - ```PartsOrder```
- - ```ExpenseReportInfo```
- - ```ExpenseLine```
- - ```Category```
+ - ```InventoryItem``` | ```ServiceActivity``` | ```EquipmentInfo``` | ```MileageEntry```
+ - ```PartsOrder``` | ```ExpenseReportInfo``` | ```ExpenseLine``` | ```Category```
 
 All models:
  - Auto-create tables
@@ -242,7 +257,7 @@ Automatic inventory sync occurs in the ServiceActivity model.
 
 ---
 
-### Excel Import/Export
+## Excel Import/Export
 Importers
 
 Located in `core/importers`
@@ -258,18 +273,11 @@ All use `openpyxl`.
 
 ---
 
-### Future Enhancements
- - Undo/redo system
- - Export dashboards
- - Automated backups
- - Theming system
- - Packaging with PyInstaller
- - Multi-user syncing
- - Cloud optional mode
-
----
-
-### License
+## License
 
 This project is licensed under the **MIT License**.  
 See the [LICENSE](LICENSE) file for details.
+
+Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
+No file chosen
+Attach files by dragging & dropping, selecting or pasting them.
