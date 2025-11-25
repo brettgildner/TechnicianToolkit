@@ -1,167 +1,111 @@
-Skip to content
-Navigation Menu
-brettgildner
-TechnicianToolkit
+# Technician Toolkit
 
-Type / to search
-Code
-Issues
-2
-Pull requests
-Actions
-Projects
-Security
-Insights
-Settings
-Files
-Go to file
-t
-assets
-core
-ui
-.gitignore
-LICENSE
-README.md
-TechnicalDocumentation.md
-app.py
-main.py
-requirements.txt
-TechnicianToolkit
-/
-README.md
-in
-master
+A modular, offline-capable desktop application built with PySide6 for field technicians.
+It consolidates inventory management, service activity logging, mileage tracking, expense 
+reporting, equipment information, and parts ordering into a single unified interface backed 
+by a local SQLite database.
 
-Edit
+The system features a reusable UI component framework, a model-driven signal bus, Excel 
+import/export utilities, and a dark-themed polished UI.
 
-Preview
-Indent mode
+---
 
-Spaces
-Indent size
+## Table of Contents
+ - Overview
+ - Key Features
+ - Screenshots
+ - Installation
+ - Running the App
+ - Project Structure
+ - Architecture
+ - UI Framework
+ - Database Models
+ - Excel Import/Export
+ - License
 
-2
-Line wrap mode
+---
 
-Soft wrap
-Editing README.md file contents
-Selection deleted
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
+## Overview
+
+The Technician Toolkit acts as a centralized workspace for technicians, replacing 
+spreadsheets and scattered tools with a robust, cohesive desktop environment.
+
+Built with PySide6 (Qt for Python) and designed for offline use, it supports:
+
+ - Secure authentication
+ - Inventory tracking with automatic synchronization
+ - Service activity logging with part usage integration
+ - Mileage tracking with template export
+ - Expense reporting
+ - Equipment information management
+ - Parts ordering
+ - Dashboard analytics and status widgets
+
+---
+
+## Key Features
+
+### Authentication
+ - Secure login & signup | Argon2id password hashing
+ - Fully offline authentication | User-specific data isolation
+
+### Inventory Management
+ - Track part numbers, quantities, categories | Inline editing | Excel imports
+ - Column filtering & visibility controls | Automatic sync with Service Activity part usage
+
+### Service Activity Log
+ - Customer, area, equipment, malfunction, timestamps | Duration automatically calculated
+ - Add/remove parts and quantities | Full filtering system with column popups
+ - Excel import support | Automatic inventory adjustments (additions, deletions, updates)
+
+### Equipment Information
+ - Searchable table | Column filtering & actions | Edit and delete equipment records
+
+### Mileage Tracker
+ - Add/edit/delete mileage entries | Filter by text, date range, or column filters
+ - Computed “miles driven” column | Export to preformatted Excel mileage template
+
+### Expense Reporting
+ - Maintain a monthly expense report header | Add multiple expense line items
+ - Export to Excel expense form template | Supports mileage and itemized entries
+
+### Parts Ordering
+ - Records routine restock and/or customer-requested orders | Filterable table
+ - CSV export with optional deletion | Integrated editor & confirmation form
+
+### Dashboard
+ - Toner level visualization | Inventory verification countdown | Mileage deadline countdown
+
+---
+## Screenshots
+
+
+| **Dashboard** | **Service Activity** |
+|----------|------------------|
+| <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/Dashboard/Dashboard.png" width="400"> | <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/ServiceActivity/ServiceActivity.png" width="400"> |
+| *Toner levels, deadlines, and quick-action buttons* | *Logged service calls with timestamps, parts, and details* |
+
+<br>
+
+| **Inventory** | **Expense Report** |
+|----------|----------------|
+| <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/Inventory/Inventory.png" width="400"> | <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/ExpenseReport/ExpenseReport.png" width="400"> |
+| *Part tracking, verification dates, and a 'quick-order' function* | *Monthly expense header + itemized entries with export* |
+
+
+---
+
+## Installation
+### 1. Clone the repository
+```bash
+git clone https://github.com/brettgildner/TechnicianToolkit.git
+
+cd TechnicianToolkit
+```
+### 2. Create & activate a virtual environment
+```bash
+python -m venv .venv
+
 # Windows
 .venv\Scripts\activate
 
@@ -277,7 +221,3 @@ All use `openpyxl`.
 
 This project is licensed under the **MIT License**.  
 See the [LICENSE](LICENSE) file for details.
-
-Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
-No file chosen
-Attach files by dragging & dropping, selecting or pasting them.
