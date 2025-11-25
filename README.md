@@ -97,14 +97,10 @@ Built with PySide6 (Qt for Python) and designed for offline use, it supports:
  - Mileage deadline countdown
 
 ---
+### Screenshots
 
-📸 Screenshots
-```bash
-(Replace paths with your own images)
-/screenshots/dashboard.png  
-/screenshots/inventory.png  
-/screenshots/service_activity.png  
-```
+<p align="center"> <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/Dashboard/Dashboard.png" width="45%"><br> <em>Dashboard — toner levels, deadlines, and quick-action buttons</em> </p> <p align="center"> <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/ServiceActivity/ServiceActivity.png" width="45%"><br> <em>Service Activity — logged service calls with timestamps, parts, and details</em> </p> <p align="center"> <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/EquipmentInfo/EquipmentInfo.png" width="45%"><br> <em>Equipment Info — searchable, filterable equipment database with actions</em> </p> <p align="center"> <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/Inventory/Inventory.png" width="45%"><br> <em>Inventory — part tracking, verification dates, and Excel import</em> </p> <p align="center"> <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/PartsOrders/PartsOrders.png" width="45%"><br> <em>Parts Orders — restock and customer-requested parts tracking</em> </p> <p align="center"> <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/ExpenseReport/ExpenseReport.png" width="45%"><br> <em>Expense Report — monthly expense header + itemized entries with export</em> </p> <p align="center"> <img src="https://raw.githubusercontent.com/brettgildner/TechnicianToolkit/master/assets/screenshots/MileageTracker/MileageTracker.png" width="45%"><br> <em>Mileage Tracker — trip logging with automatic mileage calculation</em> </p> 
+
 ---
 
 ### Installation
@@ -197,7 +193,7 @@ The `App` listens and refreshes pages automatically.
 
 #### Forms
 All CRUD dialogs use:
- - BaseDialogForm (except ExpenseEntryForm)
+ - ```BaseDialogForm``` (except ```ExpenseEntryForm```)
  - Uniform layout
  - Validations
  - Model save + callback
@@ -263,5 +259,5 @@ All use `openpyxl`.
 
 ### License
 
-This project currently has no license.
-All rights reserved — closed-source until a license is added.
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for details.
